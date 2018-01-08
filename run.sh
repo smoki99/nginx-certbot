@@ -2,8 +2,6 @@
 
 echo "Starting Up Certification Imange"
 
-CERTDIR="/etc/nginx/certs/"
-
 # Check environment variable for nginx server is set
 
 if [ -z "$NGINX"]; then
@@ -21,7 +19,7 @@ if [ ! "$(docker ps -q -f name=$NGINX)" ]; then
     exit 1
 fi
 
-echo ${NGINXSERVER} > /nginxservername.txt
+echo ${NGINX} > /nginxservername.txt
 
 echo "Error: create new domainkeys"
 IFS=',' read -ra ADDR <<< "$domains"
