@@ -25,7 +25,7 @@ echo "Start: create new domainkeys"
 IFS=',' read -ra ADDR <<< "$domains"
 for domain in "${ADDR[@]}"; do
     echo "Processing ${domain}"
-    certbot certonly --verbose --noninteractive --quiet --standalone --agree-tos --email="${email}" -d "${domain}"
+    certbot certonly --webroot --webroot-path /usr/share/nginx/html --verbose --noninteractive --quiet --agree-tos --email="${email}" -d "${domain}"
  done
 
 # Restart nginxserver
