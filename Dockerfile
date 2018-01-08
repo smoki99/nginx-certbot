@@ -9,7 +9,7 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repos
 RUN apk update
 RUN apk add docker
 
-COPY ./crontab.txt / /var/spool/cron/crontabs/crontab.txt
+COPY ./crontab.txt /var/spool/cron/crontabs/crontab.txt
 COPY ./run.sh /run.sh
 COPY ./certrenew.sh /certrenew.sh
 RUN chmod +x /run.sh
