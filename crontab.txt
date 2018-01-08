@@ -1,0 +1,1 @@
+0 1 * * * /certrenew.sh >> /var/log/certrenew.log
