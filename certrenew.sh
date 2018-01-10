@@ -9,4 +9,4 @@ echo "Starting the renewal"
 echo "Renewal ended"
 
 echo "Reload NGINX Docker Container"
-docker exec ${NX} service nginx reload
+docker exec ${NX} nginx -s reload
